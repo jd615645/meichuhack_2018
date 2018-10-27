@@ -2,9 +2,9 @@
     <b-container>
         <b-row>
             <b-col>
-                <p>
+                <h3>
                     List:
-                </p>
+                </h3>
                 <div class="container">
                     <div v-for="(item, i) in JSON.parse(order.list)"
                     :key="i"
@@ -21,9 +21,9 @@
         </b-row>
         <b-row>
             <b-col>
-                <p>
+                <h3>
                     Total:
-                </p>
+                </h3>
                 <p>
                     {{ total }}
                 </p>
@@ -47,15 +47,40 @@
                         </b-col>
                     </b-row>
                 </b-container>
-                <br>
-                <b-button @click="change()" variant="primary">Change</b-button>
             </b-col>
         </b-row>
         <br>
         <b-row>
             <b-col>
-                <p>Get money:</p>
+                <h3>Get money:</h3>
                 <p>{{ countPrice }}</p>
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col>
+                <h3>
+                    You should pay back:
+                </h3>
+            </b-col>
+        </b-row>
+        <b-row>
+            <b-col>
+                <b-container>
+                    <b-row v-for="(cnt, i) in change" :key="i">
+                        <b-col>
+                        <b-container v-show="cnt !== 0">
+                            <b-row>
+                            <b-col>
+                                <img :src="`../images/TWD${money[i]}.jpg`" alt=""> 
+                            </b-col>
+                            <b-col>
+                                <p>  X{{cnt}}</p>
+                            </b-col>
+                            </b-row>
+                        </b-container>
+                        </b-col>
+                    </b-row>
+                </b-container>
             </b-col>
         </b-row>
     </b-container>
@@ -81,9 +106,6 @@ export default {
     countTotal() {
       let items = JSON.parse(this.order.list);
       return items.reduce((carry, item) => carry + item.price, 0);
-    },
-    change() {
-      console.log(this.total);
     }
   },
   computed: {
@@ -93,6 +115,23 @@ export default {
         s += parseInt(this.money_dict[index]) * this.money[index];
       }
       return s;
+    },
+    change() {
+      if (this.countPrice > this.total) {
+        let diff = this.countPrice - this.total;
+        let change_dict = new Array(this.money.length).fill(0);
+        let i = this.money.length - 1;
+        while (diff > 0) {
+          if (diff >= this.money[i]) {
+            while (diff >= this.money[i]) {
+              change_dict[i]++;
+              diff -= this.money[i];
+            }
+          }
+          i--;
+        }
+        return change_dict;
+      }
     }
   }
 };
