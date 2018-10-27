@@ -27,7 +27,7 @@ body {
 }
 
 .list-container {
-  height: 200px;
-  background: red;
+  display: flex;
+  flex-direction: column;
 }
 

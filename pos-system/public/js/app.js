@@ -64436,6 +64436,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -64448,30 +64453,36 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card",
-    {
-      staticClass: "mb-2",
-      staticStyle: { "max-width": "20rem" },
-      attrs: {
-        title: "Card Title",
-        "img-src": "https://picsum.photos/600/300/?image=25",
-        "img-alt": "Image",
-        "img-top": "",
-        tag: "article"
-      }
-    },
-    [
-      _c("p", { staticClass: "card-text" }, [
-        _vm._v(
-          "\n    Some quick example text to build on the card title and make up the bulk of the card's content.\n  "
-        )
-      ]),
-      _vm._v(" "),
-      _c("b-button", { attrs: { href: "#", variant: "primary" } }, [
-        _vm._v("Go somewhere")
-      ])
-    ],
-    1
+    "div",
+    _vm._l(3, function(i) {
+      return _c(
+        "b-card",
+        {
+          key: i,
+          staticClass: "mb-2",
+          staticStyle: { "max-width": "20rem" },
+          attrs: {
+            title: "Order #" + i,
+            "img-src": "https://picsum.photos/600/300/?image=25",
+            "img-alt": "Image",
+            "img-top": "",
+            tag: "article"
+          }
+        },
+        [
+          _c("p", { staticClass: "card-text" }, [
+            _vm._v(
+              "\n      Some quick example text to build on the card title and make up the bulk of the card's content.\n    "
+            )
+          ]),
+          _vm._v(" "),
+          _c("b-button", { attrs: { href: "#", variant: "primary" } }, [
+            _vm._v("Go somewhere")
+          ])
+        ],
+        1
+      )
+    })
   )
 }
 var staticRenderFns = []
