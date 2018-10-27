@@ -49,6 +49,9 @@ class OrderController extends Controller
     public function show($id)
     {
         //
+        $order = OrderList::findOrFail($id);
+        // dd($order);
+        return view('orderItem', ['order' => json_encode($order, false)]);
     }
 
     /**

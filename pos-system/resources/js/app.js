@@ -20,6 +20,7 @@ Vue.use(BootstrapVue);
 
 Vue.component('dash-board', require('./components/DashBoard.vue'));
 Vue.component('order-list', require('./components/OrderList.vue'));
+Vue.component('order-item', require('./components/OrderItem.vue'));
 
 
 const app = new Vue({
