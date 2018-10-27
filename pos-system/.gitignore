@@ -1,12 +1,12 @@
 /node_modules
 /public/hot
 /public/storage
-/laradock
 /storage/*.key
 /vendor
 /.idea
 /.vscode
 /.vagrant
+laradock
 Homestead.json
 Homestead.yaml
 npm-debug.log
