@@ -6,11 +6,14 @@
  */
 
 import BootstrapVue from 'bootstrap-vue'
+import { IntegerPlusminus } from 'vue-integer-plusminus'
 require('./bootstrap');
 
 window.Vue = require('vue');
 
 Vue.use(BootstrapVue);
+Vue.use(IntegerPlusminus);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
