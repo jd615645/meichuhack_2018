@@ -19,7 +19,9 @@
 </template>
 <script>
 export default {
-    
-}
+  props: ["orders"],
+  created() {},
+  methods: {}
+};
 </script>
 

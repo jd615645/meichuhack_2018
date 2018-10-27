@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-<dash-board></dash-board>
+<dash-board :orders="{{ $list }}"></dash-board>
 @endsection
 
 @section('script')

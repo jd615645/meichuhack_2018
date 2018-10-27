@@ -9,12 +9,16 @@
         </b-row>
         <b-row>
             <b-col>
-                <order-list></order-list>
+                <order-list :orders="orders"></order-list>
             </b-col>
         </b-row>
     </b-container>
 </template>
 <script>
-export default {};
+export default {
+    props: ['orders'],
+    mounted(){
+    }
+};
 </script>
 

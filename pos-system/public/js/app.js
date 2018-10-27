@@ -64442,7 +64442,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ["orders"],
+  created: function created() {},
+
+  methods: {}
+});
 
 /***/ }),
 /* 218 */
@@ -64579,7 +64584,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['orders'],
+    mounted: function mounted() {}
+});
 
 /***/ }),
 /* 230 */
@@ -64603,7 +64611,11 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("b-row", [_c("b-col", [_c("order-list")], 1)], 1)
+      _c(
+        "b-row",
+        [_c("b-col", [_c("order-list", { attrs: { orders: _vm.orders } })], 1)],
+        1
+      )
     ],
     1
   )
