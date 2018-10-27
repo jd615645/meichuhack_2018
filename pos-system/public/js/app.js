@@ -64459,15 +64459,15 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    _vm._l(3, function(i) {
+    _vm._l(_vm.orders, function(order) {
       return _c(
         "b-card",
         {
-          key: i,
+          key: order.id,
           staticClass: "mb-2",
           staticStyle: { "max-width": "20rem" },
           attrs: {
-            title: "Order #" + i,
+            title: "Order #" + order.id,
             "img-src": "https://picsum.photos/600/300/?image=25",
             "img-alt": "Image",
             "img-top": "",
@@ -64475,17 +64475,19 @@ var render = function() {
           }
         },
         [
-          _c("p", { staticClass: "card-text" }, [
-            _vm._v(
-              "\n      Some quick example text to build on the card title and make up the bulk of the card's content.\n    "
-            )
-          ]),
+          _vm._l(JSON.parse(order.list), function(item, idx) {
+            return _c("p", { key: idx, staticClass: "card-text" }, [
+              _vm._v("\n      " + _vm._s(item.name) + "\n    ")
+            ])
+          }),
           _vm._v(" "),
-          _c("b-button", { attrs: { href: "#", variant: "primary" } }, [
-            _vm._v("Go somewhere")
-          ])
+          _c(
+            "b-button",
+            { attrs: { href: "order/" + order.id, variant: "primary" } },
+            [_vm._v("Go somewhere")]
+          )
         ],
-        1
+        2
       )
     })
   )

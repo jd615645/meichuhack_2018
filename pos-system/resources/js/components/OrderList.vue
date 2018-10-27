@@ -1,26 +1,27 @@
 <template>
 <div >
-      <b-card :title="`Order #${i}`"
+      <b-card :title="`Order #${order.id}`"
           img-src="https://picsum.photos/600/300/?image=25"
           img-alt="Image"
           img-top
           tag="article"
           style="max-width: 20rem;"
           class="mb-2"
-          v-for="i in 3"
-          :key="i"
+          v-for="order in orders"
+          :key="order.id"
           >
-    <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of the card's content.
+    <p class="card-text" v-for="(item, idx) in JSON.parse(order.list)" :key="idx">
+      {{ item.name }}
     </p>
-    <b-button href="#" variant="primary">Go somewhere</b-button>
+    <b-button :href="`order/${order.id}`" variant="primary">Go somewhere</b-button>
   </b-card>
 </div>
 </template>
 <script>
 export default {
   props: ["orders"],
-  created() {},
+  created() {
+  },
   methods: {}
 };
 </script>
