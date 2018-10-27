@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/order', 'OrderController@index');
+Route::post('/order', 'OrderController@store');
+
