@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-<order-list></order-list>
+<dash-board></dash-board>
 @endsection
 
 @section('script')

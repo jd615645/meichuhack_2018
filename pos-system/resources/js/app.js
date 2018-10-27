@@ -18,7 +18,9 @@ Vue.use(BootstrapVue);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.component('dash-board', require('./components/DashBoard.vue'));
 Vue.component('order-list', require('./components/OrderList.vue'));
+
 
 const app = new Vue({
     el: '#app'
