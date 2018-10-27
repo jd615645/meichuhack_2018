@@ -64703,12 +64703,43 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['order'],
-    created: function created() {
-        console.log(this.order);
+  props: ["order"],
+  data: function data() {
+    return {
+      total: 0
+    };
+  },
+  created: function created() {
+    this.total = this.countPrice();
+  },
+
+  methods: {
+    countPrice: function countPrice() {
+      var items = JSON.parse(this.order.list);
+      return items.reduce(function (carry, item) {
+        return carry + item.price;
+      }, 0);
     }
+  }
 });
 
 /***/ }),
@@ -64725,14 +64756,39 @@ var render = function() {
       _c(
         "b-row",
         [
-          _c(
-            "b-col",
-            _vm._l(JSON.parse(_vm.order.list), function(item, i) {
-              return _c("div", { key: i }, [
-                _c("p", [_vm._v(" " + _vm._s(item.price) + " ")])
-              ])
-            })
-          )
+          _c("b-col", [
+            _c(
+              "div",
+              { staticClass: "container" },
+              _vm._l(JSON.parse(_vm.order.list), function(item, i) {
+                return _c("div", { key: i, staticClass: "row" }, [
+                  _c("div", { staticClass: "col" }, [
+                    _c("p", [_vm._v(" " + _vm._s(item.name) + " ")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col" }, [
+                    _c("p", [_vm._v(" " + _vm._s(item.price) + " ")])
+                  ])
+                ])
+              })
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-row",
+        [
+          _c("b-col", [
+            _c("p", [_vm._v("\n                Price:\n            ")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "\n                " + _vm._s(_vm.total) + "\n            "
+              )
+            ])
+          ])
         ],
         1
       )
