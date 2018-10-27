@@ -12,5 +12,6 @@
 */
 
 Route::get('/order', 'OrderController@index');
+Route::get('/order/{id}', 'OrderController@show');
 Route::post('/order', 'OrderController@store');
 
