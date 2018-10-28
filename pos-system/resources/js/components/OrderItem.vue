@@ -1,38 +1,45 @@
 <template>
+<div>
     <b-container>
         <b-row>
             <b-col>
-                <h3>
-                    List:
-                </h3>
-                <div class="container">
-                    <div v-for="(item, i) in JSON.parse(order.list)"
-                    :key="i"
-                    class="row">
-                        <div class="col">
-                            <p> {{ item.name }} </p>
-                        </div>
-                        <div class="col">
-                            <p> {{ item.price }} </p>
-                        </div>
-                    </div>
-                </div>
-            </b-col>
-        </b-row>
-        <b-row>
-            <b-col>
-                <h3>
-                    Total:
-                </h3>
-                <p>
-                    {{ total }}
-                </p>
+                <b-container >
+                    <b-row>
+                        <b-col>
+                            <h3>
+                                List:
+                            </h3>
+                            <div >
+                                <div v-for="(item, i) in JSON.parse(order.list)"
+                                :key="i"
+                                >
+                                    <div >
+                                        <p> {{ item.name }} </p>
+                                    </div>
+                                    <div >
+                                        <p> {{ item.price }} </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </b-col>
+                    </b-row>
+                    <b-row>
+                        <b-col>
+                            <h3>
+                                Total:
+                            </h3>
+                            <p>
+                            $ {{ total }}
+                            </p>
+                        </b-col>
+                    </b-row>
+                </b-container>
             </b-col>
         </b-row>
         <br>
         <b-row>
             <b-col>
-                <b-container>
+                <b-container >
                     <b-row v-for="(m, i) in money" :key="i">
                         <b-col>
                            <img :src="`../images/TWD${m}.jpg`" alt=""> 
@@ -46,26 +53,33 @@
                             ></b-form-input>
                         </b-col>
                     </b-row>
+                            <b-row>
+                                <b-col>
+                                    <h3>Get money:</h3>
+                                    <p> $ {{ countPrice }}</p>
+                                </b-col>
+                            </b-row>
                 </b-container>
             </b-col>
         </b-row>
         <br>
         <b-row>
             <b-col>
-                <h3>Get money:</h3>
-                <p>{{ countPrice }}</p>
-            </b-col>
-        </b-row>
-        <b-row>
-            <b-col>
-                <h3>
-                    You should pay back:
-                </h3>
-            </b-col>
-        </b-row>
-        <b-row>
-            <b-col>
-                <b-container>
+                <b-container >
+                    <b-row>
+                        <b-col>
+                            <h3>
+                                You should pay back:
+                            </h3>
+                        </b-col>
+                    </b-row>
+                    <b-row v-show="countPrice > total">
+                        <b-col>
+                        <p>
+                            $ {{ countPrice - total }}
+                        </p>
+                        </b-col>
+                    </b-row>
                     <b-row v-for="(cnt, i) in change" :key="i">
                         <b-col>
                         <b-container v-show="cnt !== 0">
@@ -84,6 +98,7 @@
             </b-col>
         </b-row>
     </b-container>
+</div>
 </template>
 
 <script>
