@@ -97,13 +97,10 @@
                     <b-row v-for="(cnt, i) in change" :key="i">
                         <b-col>
                         <b-container v-show="cnt !== 0">
-                            <b-row>
-                            <b-col>
-                                <img :src="`../images/TWD${money[i]}.jpg`" alt=""> 
-                            </b-col>
-                            <b-col>
-                                <p>  X{{cnt}}</p>
-                            </b-col>
+                            <b-row v-for="(c, idx) in cnt" :key="idx">
+                                <b-col>
+                                    <img :src="`../images/TWD${money[i]}.jpg`" alt=""> 
+                                </b-col>
                             </b-row>
                         </b-container>
                         </b-col>
