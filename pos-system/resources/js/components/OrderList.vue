@@ -1,5 +1,5 @@
 <template>
-<div >
+<div class="list-container">
       <b-card :title="`Order #${order.id}`"
           img-src="https://picsum.photos/600/300/?image=25"
           img-alt="Image"
