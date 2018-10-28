@@ -64787,9 +64787,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["order"],
@@ -65140,9 +65137,10 @@ var render = function() {
                                       }
                                     ]
                                   },
-                                  [
-                                    _c(
+                                  _vm._l(cnt, function(c, idx) {
+                                    return _c(
                                       "b-row",
+                                      { key: idx },
                                       [
                                         _c("b-col", [
                                           _c("img", {
@@ -65154,16 +65152,11 @@ var render = function() {
                                               alt: ""
                                             }
                                           })
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("b-col", [
-                                          _c("p", [_vm._v("  X" + _vm._s(cnt))])
                                         ])
                                       ],
                                       1
                                     )
-                                  ],
-                                  1
+                                  })
                                 )
                               ],
                               1
