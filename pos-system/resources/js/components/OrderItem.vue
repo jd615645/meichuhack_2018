@@ -42,9 +42,9 @@
                             <h3>
                                 Total:
                             </h3>
-                            <p>
+                            <h2>
                             $ {{ total }}
-                            </p>
+                            </h2>
                         </b-col>
                     </b-row>
                 </b-container>
@@ -70,7 +70,7 @@
                             <b-row>
                                 <b-col>
                                     <h3>Get money:</h3>
-                                    <p> $ {{ countPrice }}</p>
+                                    <h2> $ {{ countPrice }}</h2>
                                 </b-col>
                             </b-row>
                 </b-container>
@@ -89,22 +89,41 @@
                     </b-row>
                     <b-row v-show="countPrice > total">
                         <b-col>
-                        <p>
+                        <h4>
                             $ {{ countPrice - total }}
-                        </p>
+                        </h4>
                         </b-col>
                     </b-row>
-                    <b-row v-for="(cnt, i) in change" :key="i">
+                    <b-row>
                         <b-col>
-                        <b-container v-show="cnt !== 0">
-                            <b-row v-for="(c, idx) in cnt" :key="idx">
-                                <b-col>
-                                    <img :src="`../images/TWD${money[i]}.jpg`" alt=""> 
-                                </b-col>
-                            </b-row>
-                        </b-container>
+                            <b-container>
+                                <b-row v-for="(cnt, i) in change" :key="i">
+                                    <b-col>
+                                    <b-container v-show="cnt !== 0">
+                                        <b-row v-for="(c, idx) in cnt" :key="idx">
+                                            <b-col>
+                                                <img :src="`../images/TWD${money[i]}.jpg`" alt=""> 
+                                            </b-col>
+                                        </b-row>
+                                    </b-container>
+                                    </b-col>
+                                </b-row>
+                            </b-container>
+                        </b-col>
+                        <b-col>
+                            <b-container>
+                                <b-row v-for="(cnt, i) in change" :key="i" v-show="cnt !== 0">
+                                    <b-col>
+                                        <p>${{ money[i] }}</p>
+                                    </b-col>
+                                    <b-col>
+                                        <p>X{{ cnt }}</p>
+                                    </b-col>
+                                </b-row>
+                            </b-container>
                         </b-col>
                     </b-row>
+
                 </b-container>
             </b-col>
         </b-row>
