@@ -64602,7 +64602,7 @@ var render = function() {
           _c(
             "b-button",
             { attrs: { href: "order/" + order.id, variant: "primary" } },
-            [_vm._v("Go somewhere")]
+            [_vm._v("Go checked")]
           )
         ],
         2
