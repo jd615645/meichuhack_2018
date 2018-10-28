@@ -64974,7 +64974,7 @@ var render = function() {
                               )
                             ]),
                             _vm._v(" "),
-                            _c("p", [
+                            _c("h2", [
                               _vm._v(
                                 "\n                            $ " +
                                   _vm._s(_vm.total) +
@@ -65051,7 +65051,7 @@ var render = function() {
                           _c("b-col", [
                             _c("h3", [_vm._v("Get money:")]),
                             _vm._v(" "),
-                            _c("p", [_vm._v(" $ " + _vm._s(_vm.countPrice))])
+                            _c("h2", [_vm._v(" $ " + _vm._s(_vm.countPrice))])
                           ])
                         ],
                         1
@@ -65105,7 +65105,7 @@ var render = function() {
                         },
                         [
                           _c("b-col", [
-                            _c("p", [
+                            _c("h4", [
                               _vm._v(
                                 "\n                            $ " +
                                   _vm._s(_vm.countPrice - _vm.total) +

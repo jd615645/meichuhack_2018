@@ -42,9 +42,9 @@
                             <h3>
                                 Total:
                             </h3>
-                            <p>
+                            <h2>
                             $ {{ total }}
-                            </p>
+                            </h2>
                         </b-col>
                     </b-row>
                 </b-container>
@@ -70,7 +70,7 @@
                             <b-row>
                                 <b-col>
                                     <h3>Get money:</h3>
-                                    <p> $ {{ countPrice }}</p>
+                                    <h2> $ {{ countPrice }}</h2>
                                 </b-col>
                             </b-row>
                 </b-container>
@@ -89,9 +89,9 @@
                     </b-row>
                     <b-row v-show="countPrice > total">
                         <b-col>
-                        <p>
+                        <h4>
                             $ {{ countPrice - total }}
-                        </p>
+                        </h4>
                         </b-col>
                     </b-row>
                     <b-row v-for="(cnt, i) in change" :key="i">
