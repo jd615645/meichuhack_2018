@@ -9,18 +9,26 @@
                             <h3>
                                 List:
                             </h3>
-                            <div >
-                                <div v-for="(item, i) in JSON.parse(order.list)"
-                                :key="i"
-                                >
-                                    <div >
+    
+                                <b-container>
+                                    <b-row v-for="(item, i) in JSON.parse(order.list)"
+                                :key="i">
+                                        <b-col>
                                         <p> {{ item.name }} </p>
-                                    </div>
-                                    <div >
+                                        </b-col>
+                                        <b-col>
                                         <p> {{ item.price }} </p>
-                                    </div>
-                                </div>
-                            </div>
+                                        </b-col>
+                                        <b-col>
+                                            <b-container>
+                                                <b-row v-for="(k, v) in item.options" :key="v">
+                                                    <b-col>{{ v }}</b-col>
+                                                    <b-col>{{ k }}</b-col>
+                                                </b-row>
+                                            </b-container>
+                                        </b-col>
+                                    </b-row>
+                                </b-container>                           
                         </b-col>
                     </b-row>
                     <b-row>

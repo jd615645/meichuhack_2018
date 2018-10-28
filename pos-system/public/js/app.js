@@ -64775,6 +64775,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["order"],
@@ -64854,35 +64862,73 @@ var render = function() {
                       _c(
                         "b-row",
                         [
-                          _c("b-col", [
-                            _c("h3", [
-                              _vm._v(
-                                "\n                                List:\n                            "
+                          _c(
+                            "b-col",
+                            [
+                              _c("h3", [
+                                _vm._v(
+                                  "\n                                List:\n                            "
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "b-container",
+                                _vm._l(JSON.parse(_vm.order.list), function(
+                                  item,
+                                  i
+                                ) {
+                                  return _c(
+                                    "b-row",
+                                    { key: i },
+                                    [
+                                      _c("b-col", [
+                                        _c("p", [
+                                          _vm._v(" " + _vm._s(item.name) + " ")
+                                        ])
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("b-col", [
+                                        _c("p", [
+                                          _vm._v(" " + _vm._s(item.price) + " ")
+                                        ])
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "b-col",
+                                        [
+                                          _c(
+                                            "b-container",
+                                            _vm._l(item.options, function(
+                                              k,
+                                              v
+                                            ) {
+                                              return _c(
+                                                "b-row",
+                                                { key: v },
+                                                [
+                                                  _c("b-col", [
+                                                    _vm._v(_vm._s(v))
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("b-col", [
+                                                    _vm._v(_vm._s(k))
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            })
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                })
                               )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              _vm._l(JSON.parse(_vm.order.list), function(
-                                item,
-                                i
-                              ) {
-                                return _c("div", { key: i }, [
-                                  _c("div", [
-                                    _c("p", [
-                                      _vm._v(" " + _vm._s(item.name) + " ")
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", [
-                                    _c("p", [
-                                      _vm._v(" " + _vm._s(item.price) + " ")
-                                    ])
-                                  ])
-                                ])
-                              })
-                            )
-                          ])
+                            ],
+                            1
+                          )
                         ],
                         1
                       ),
