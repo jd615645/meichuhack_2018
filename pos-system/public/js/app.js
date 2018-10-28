@@ -64576,6 +64576,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "list-container" },
     _vm._l(_vm.orders, function(order) {
       return _c(
         "b-card",
@@ -64601,7 +64602,7 @@ var render = function() {
           _c(
             "b-button",
             { attrs: { href: "order/" + order.id, variant: "primary" } },
-            [_vm._v("Go somewhere")]
+            [_vm._v("Go checked")]
           )
         ],
         2
