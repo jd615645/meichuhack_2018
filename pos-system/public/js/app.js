@@ -65218,13 +65218,13 @@ var render = function() {
                                     },
                                     [
                                       _c("b-col", [
-                                        _c("p", [
+                                        _c("h4", [
                                           _vm._v("$" + _vm._s(_vm.money[i]))
                                         ])
                                       ]),
                                       _vm._v(" "),
                                       _c("b-col", [
-                                        _c("p", [_vm._v("X" + _vm._s(cnt))])
+                                        _c("h4", [_vm._v("X" + _vm._s(cnt))])
                                       ])
                                     ],
                                     1

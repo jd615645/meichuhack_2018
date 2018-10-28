@@ -114,10 +114,10 @@
                             <b-container>
                                 <b-row v-for="(cnt, i) in change" :key="i" v-show="cnt !== 0">
                                     <b-col>
-                                        <p>${{ money[i] }}</p>
+                                        <h4>${{ money[i] }}</h4>
                                     </b-col>
                                     <b-col>
-                                        <p>X{{ cnt }}</p>
+                                        <h4>X{{ cnt }}</h4>
                                     </b-col>
                                 </b-row>
                             </b-container>
