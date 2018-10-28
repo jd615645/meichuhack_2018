@@ -1,8 +1,8 @@
-@extends('layouts.view')
+@extends('layouts.item')
 @section('style')
 @endsection
 
-@section('content')
+@section('item')
 <order-item :order="{{ $order }}"></order-item>
 @endsection
 

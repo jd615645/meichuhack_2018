@@ -64760,6 +64760,35 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["order"],
@@ -64822,189 +64851,331 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-container",
+    "div",
     [
       _c(
-        "b-row",
-        [
-          _c("b-col", [
-            _c("h3", [_vm._v("\n                List:\n            ")]),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "container" },
-              _vm._l(JSON.parse(_vm.order.list), function(item, i) {
-                return _c("div", { key: i, staticClass: "row" }, [
-                  _c("div", { staticClass: "col" }, [
-                    _c("p", [_vm._v(" " + _vm._s(item.name) + " ")])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("p", [_vm._v(" " + _vm._s(item.price) + " ")])
-                  ])
-                ])
-              })
-            )
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-row",
-        [
-          _c("b-col", [
-            _c("h3", [_vm._v("\n                Total:\n            ")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n                " + _vm._s(_vm.total) + "\n            "
-              )
-            ])
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c(
-        "b-row",
+        "b-container",
         [
           _c(
-            "b-col",
+            "b-row",
             [
               _c(
-                "b-container",
-                _vm._l(_vm.money, function(m, i) {
-                  return _c(
-                    "b-row",
-                    { key: i },
-                    [
-                      _c("b-col", [
-                        _c("img", {
-                          attrs: { src: "../images/TWD" + m + ".jpg", alt: "" }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        [
-                          _c("b-form-input", {
-                            attrs: {
-                              type: "number",
-                              value: _vm.money_dict[i],
-                              min: 0
-                            },
-                            model: {
-                              value: _vm.money_dict[i],
-                              callback: function($$v) {
-                                _vm.$set(_vm.money_dict, i, $$v)
-                              },
-                              expression: "money_dict[i]"
-                            }
-                          })
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                })
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c(
-        "b-row",
-        [
-          _c("b-col", [
-            _c("h3", [_vm._v("Get money:")]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.countPrice))])
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-row",
-        [
-          _c("b-col", [
-            _c("h3", [
-              _vm._v("\n                You should pay back:\n            ")
-            ])
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-row",
-        [
-          _c(
-            "b-col",
-            [
-              _c(
-                "b-container",
-                _vm._l(_vm.change, function(cnt, i) {
-                  return _c(
-                    "b-row",
-                    { key: i },
+                "b-col",
+                [
+                  _c(
+                    "b-container",
                     [
                       _c(
-                        "b-col",
+                        "b-row",
                         [
                           _c(
-                            "b-container",
-                            {
-                              directives: [
-                                {
-                                  name: "show",
-                                  rawName: "v-show",
-                                  value: cnt !== 0,
-                                  expression: "cnt !== 0"
-                                }
-                              ]
-                            },
+                            "b-col",
                             [
+                              _c("h3", [
+                                _vm._v(
+                                  "\n                                List:\n                            "
+                                )
+                              ]),
+                              _vm._v(" "),
                               _c(
-                                "b-row",
+                                "b-container",
                                 [
-                                  _c("b-col", [
-                                    _c("img", {
-                                      attrs: {
-                                        src:
-                                          "../images/TWD" +
-                                          _vm.money[i] +
-                                          ".jpg",
-                                        alt: ""
-                                      }
-                                    })
-                                  ]),
+                                  _c(
+                                    "b-row",
+                                    [
+                                      _c("b-col", [
+                                        _c("strong", [_vm._v("Meal")])
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("b-col", [
+                                        _c("strong", [_vm._v("Price")])
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("b-col", [
+                                        _c("strong", [_vm._v("Options")])
+                                      ])
+                                    ],
+                                    1
+                                  ),
                                   _vm._v(" "),
-                                  _c("b-col", [
-                                    _c("p", [_vm._v("  X" + _vm._s(cnt))])
-                                  ])
+                                  _c("br"),
+                                  _vm._v(" "),
+                                  _vm._l(JSON.parse(_vm.order.list), function(
+                                    item,
+                                    i
+                                  ) {
+                                    return _c(
+                                      "b-row",
+                                      { key: i },
+                                      [
+                                        _c("b-col", [
+                                          _c("p", [
+                                            _vm._v(
+                                              " " + _vm._s(item.name) + " "
+                                            )
+                                          ])
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("b-col", [
+                                          _c("p", [
+                                            _vm._v(
+                                              " " + _vm._s(item.price) + " "
+                                            )
+                                          ])
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "b-col",
+                                          [
+                                            _c(
+                                              "b-container",
+                                              _vm._l(item.options, function(
+                                                k,
+                                                v
+                                              ) {
+                                                return _c(
+                                                  "b-row",
+                                                  { key: v },
+                                                  [
+                                                    _c("b-col", [
+                                                      _vm._v(_vm._s(v))
+                                                    ]),
+                                                    _vm._v(" "),
+                                                    _c("b-col", [
+                                                      _vm._v(_vm._s(k))
+                                                    ])
+                                                  ],
+                                                  1
+                                                )
+                                              })
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  })
                                 ],
-                                1
+                                2
                               )
                             ],
                             1
                           )
                         ],
                         1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-row",
+                        [
+                          _c("b-col", [
+                            _c("h3", [
+                              _vm._v(
+                                "\n                                Total:\n                            "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "\n                            $ " +
+                                  _vm._s(_vm.total) +
+                                  "\n                            "
+                              )
+                            ])
+                          ])
+                        ],
+                        1
                       )
                     ],
                     1
                   )
-                })
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c(
+            "b-row",
+            [
+              _c(
+                "b-col",
+                [
+                  _c(
+                    "b-container",
+                    [
+                      _vm._l(_vm.money, function(m, i) {
+                        return _c(
+                          "b-row",
+                          { key: i },
+                          [
+                            _c("b-col", [
+                              _c("img", {
+                                attrs: {
+                                  src: "../images/TWD" + m + ".jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "b-col",
+                              [
+                                _c("b-form-input", {
+                                  attrs: {
+                                    type: "number",
+                                    value: _vm.money_dict[i],
+                                    min: 0
+                                  },
+                                  model: {
+                                    value: _vm.money_dict[i],
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.money_dict, i, $$v)
+                                    },
+                                    expression: "money_dict[i]"
+                                  }
+                                })
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "b-row",
+                        [
+                          _c("b-col", [
+                            _c("h3", [_vm._v("Get money:")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v(" $ " + _vm._s(_vm.countPrice))])
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    2
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c(
+            "b-row",
+            [
+              _c(
+                "b-col",
+                [
+                  _c(
+                    "b-container",
+                    [
+                      _c(
+                        "b-row",
+                        [
+                          _c("b-col", [
+                            _c("h3", [
+                              _vm._v(
+                                "\n                                You should pay back:\n                            "
+                              )
+                            ])
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-row",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.countPrice > _vm.total,
+                              expression: "countPrice > total"
+                            }
+                          ]
+                        },
+                        [
+                          _c("b-col", [
+                            _c("p", [
+                              _vm._v(
+                                "\n                            $ " +
+                                  _vm._s(_vm.countPrice - _vm.total) +
+                                  "\n                        "
+                              )
+                            ])
+                          ])
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _vm._l(_vm.change, function(cnt, i) {
+                        return _c(
+                          "b-row",
+                          { key: i },
+                          [
+                            _c(
+                              "b-col",
+                              [
+                                _c(
+                                  "b-container",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "show",
+                                        rawName: "v-show",
+                                        value: cnt !== 0,
+                                        expression: "cnt !== 0"
+                                      }
+                                    ]
+                                  },
+                                  [
+                                    _c(
+                                      "b-row",
+                                      [
+                                        _c("b-col", [
+                                          _c("img", {
+                                            attrs: {
+                                              src:
+                                                "../images/TWD" +
+                                                _vm.money[i] +
+                                                ".jpg",
+                                              alt: ""
+                                            }
+                                          })
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("b-col", [
+                                          _c("p", [_vm._v("  X" + _vm._s(cnt))])
+                                        ])
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      })
+                    ],
+                    2
+                  )
+                ],
+                1
               )
             ],
             1
