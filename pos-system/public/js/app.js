@@ -64787,6 +64787,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["order"],
@@ -65117,56 +65136,109 @@ var render = function() {
                         1
                       ),
                       _vm._v(" "),
-                      _vm._l(_vm.change, function(cnt, i) {
-                        return _c(
-                          "b-row",
-                          { key: i },
-                          [
-                            _c(
-                              "b-col",
-                              [
-                                _c(
-                                  "b-container",
-                                  {
-                                    directives: [
-                                      {
-                                        name: "show",
-                                        rawName: "v-show",
-                                        value: cnt !== 0,
-                                        expression: "cnt !== 0"
-                                      }
-                                    ]
-                                  },
-                                  _vm._l(cnt, function(c, idx) {
-                                    return _c(
-                                      "b-row",
-                                      { key: idx },
-                                      [
-                                        _c("b-col", [
-                                          _c("img", {
-                                            attrs: {
-                                              src:
-                                                "../images/TWD" +
-                                                _vm.money[i] +
-                                                ".jpg",
-                                              alt: ""
-                                            }
-                                          })
-                                        ])
+                      _c(
+                        "b-row",
+                        [
+                          _c(
+                            "b-col",
+                            [
+                              _c(
+                                "b-container",
+                                _vm._l(_vm.change, function(cnt, i) {
+                                  return _c(
+                                    "b-row",
+                                    { key: i },
+                                    [
+                                      _c(
+                                        "b-col",
+                                        [
+                                          _c(
+                                            "b-container",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "show",
+                                                  rawName: "v-show",
+                                                  value: cnt !== 0,
+                                                  expression: "cnt !== 0"
+                                                }
+                                              ]
+                                            },
+                                            _vm._l(cnt, function(c, idx) {
+                                              return _c(
+                                                "b-row",
+                                                { key: idx },
+                                                [
+                                                  _c("b-col", [
+                                                    _c("img", {
+                                                      attrs: {
+                                                        src:
+                                                          "../images/TWD" +
+                                                          _vm.money[i] +
+                                                          ".jpg",
+                                                        alt: ""
+                                                      }
+                                                    })
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            })
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                })
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "b-col",
+                            [
+                              _c(
+                                "b-container",
+                                _vm._l(_vm.change, function(cnt, i) {
+                                  return _c(
+                                    "b-row",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "show",
+                                          rawName: "v-show",
+                                          value: cnt !== 0,
+                                          expression: "cnt !== 0"
+                                        }
                                       ],
-                                      1
-                                    )
-                                  })
-                                )
-                              ],
-                              1
-                            )
-                          ],
-                          1
-                        )
-                      })
+                                      key: i
+                                    },
+                                    [
+                                      _c("b-col", [
+                                        _c("p", [
+                                          _vm._v("$" + _vm._s(_vm.money[i]))
+                                        ])
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("b-col", [
+                                        _c("p", [_vm._v("X" + _vm._s(cnt))])
+                                      ])
+                                    ],
+                                    1
+                                  )
+                                })
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
                     ],
-                    2
+                    1
                   )
                 ],
                 1
