@@ -11,6 +11,12 @@
                             </h3>
     
                                 <b-container>
+                                    <b-row>
+                                        <b-col><strong>Meal</strong></b-col>
+                                        <b-col><strong>Price</strong></b-col>
+                                        <b-col><strong>Options</strong></b-col>
+                                    </b-row>
+                                    <br>
                                     <b-row v-for="(item, i) in JSON.parse(order.list)"
                                 :key="i">
                                         <b-col>
